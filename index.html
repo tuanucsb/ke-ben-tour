@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta name="robots" content="noindex" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kề Bên — Product Tour</title>
+<style>
+  :root { --accent:#0E7C66; --ink:#15201D; --bg:#F4F7F6; --soft:#E2F1EC; --mute:#5b6b66; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); }
+  header { background:#0f2a23; color:#fff; padding:40px 24px 34px; }
+  header .in { max-width:1100px; margin:0 auto; }
+  header h1 { margin:0 0 4px; font-size:30px; letter-spacing:-.02em; }
+  header h1 i { color:#12b48f; font-style:normal; }
+  header .tag { font-size:17px; opacity:.92; margin:0 0 14px; }
+  header p { margin:0; opacity:.86; font-size:15px; max-width:860px; line-height:1.55; }
+  .layers { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px; }
+  .layers div { border:1px solid rgba(255,255,255,.18); border-radius:12px; padding:14px 16px; font-size:13px; line-height:1.45; color:#cfe3dc; }
+  .layers div:first-child { border-color:#12b48f; background:rgba(18,180,143,.12); }
+  .layers b { display:block; color:#fff; font-size:15px; margin-bottom:4px; }
+  .wrap { max-width:1100px; margin:0 auto; padding:24px; }
+  .legend { background:#fff; border-radius:14px; padding:16px 20px; margin:6px 0 8px; font-size:14px; line-height:1.7; }
+  .legend b { color:var(--accent); }
+  .legend .warn { color:var(--mute); font-size:13px; }
+  h2.section { margin:40px 0 4px; font-size:20px; border-left:4px solid var(--accent); padding-left:12px; }
+  h2.section span { font-weight:400; color:var(--mute); font-size:15px; }
+  h2.section em { font-style:normal; display:inline-block; background:var(--soft); color:#0A5C4B; border-radius:999px; padding:2px 10px; font-size:11px; font-weight:600; margin-left:8px; vertical-align:middle; }
+  .card { background:#fff; border-radius:16px; box-shadow:0 1px 4px rgba(0,0,0,.06); margin:18px 0; overflow:hidden; }
+  .card .cap { padding:16px 20px; }
+  .card .cap .t { font-weight:700; font-size:16px; }
+  .card .cap .n { color:var(--accent); font-weight:600; font-size:12px; letter-spacing:.02em; text-transform:uppercase; }
+  .card .cap .q { margin:8px 0 6px; font-style:italic; color:#33403b; line-height:1.5; }
+  .card .cap .p { font-size:13px; color:var(--mute); line-height:1.5; margin-top:6px; }
+  .card img { display:block; width:100%; border-top:1px solid #eef2f0; background:#fff; }
+  .mobile img { max-width:420px; margin:0 auto; }
+  .mid img { max-width:720px; margin:0 auto; }
+  footer { text-align:center; color:var(--mute); font-size:13px; padding:30px 24px 44px; line-height:1.7; }
+  @media (max-width:760px) { .layers { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header><div class="in">
+  <h1>Kề Bên<i>.</i></h1>
+  <div class="tag">Luôn kề bên người thân của bạn, từ bệnh viện về nhà</div>
+  <p>One app, three layers. The main one is post-discharge coordination: a hospital hands the patient over, a named coordinator accepts, and a dated care plan runs at home. Around it sit an open home-care marketplace (verified nurses, midwives, labs) and the family-health ecosystem (remote doctor, results, payments, one account for the whole family). Vietnamese-first.</p>
+  <div class="layers">
+    <div><b>Điều phối sau xuất viện</b>The main one. Hospital handoff, named coordinator, dated pathway. Sections 1, 2 and 6.</div>
+    <div><b>Chợ dịch vụ tại nhà</b>The open marketplace: verified providers, booking, payment, ops. Sections 3, 4 and 7.</div>
+    <div><b>Hệ sinh thái sức khoẻ gia đình</b>The super-app layer: remote doctor, results, one family account. Section 5 and the family screens.</div>
+  </div>
+</div></header>
+<div class="wrap">
+  <div class="legend">
+    <b>34 screens</b>, captured from the running app in story order. Watch the two-minute film: <a href="ke-ben-demo.mp4">ke-ben-demo.mp4</a> or <a href="movie.html">movie.html</a> (plays in the browser).
+    <br><b>In the story</b>: BV Đa khoa Ngân Hà · coordinator Thu Ngọc · Minh · Lan · nurse Lan · neonatal nurse Hương · BS. Hùng · BV Phụ sản Sơn Ca · BS. Khoa's clinic · ops Phạm Anh.
+    <div class="warn">Illustrative data. The hospitals, the clinic, patients, doctors and agreement numbers are invented for this demo. They are not real organisations, people or signed partnerships.</div>
+  </div>
+
+  <h2 class="section">0 · Entry <span>— how a walkthrough starts</span></h2>
+  <div class="card mid"><div class="cap"><div class="n">00 · /demo</div><div class="t">One-click role launcher</div><div class="q">Ten roles, one click each, no OTP typing during a walkthrough.</div><div class="p">Exists only when DEMO_CONTROLS=1 (fail-closed). There is no reset button in the UI; reset is a terminal command.</div></div><img loading="lazy" src="screenshots/00-demo-launcher.png" alt="One-click role launcher"></div>
+  <div class="card mobile"><div class="cap"><div class="n">01 · /login</div><div class="t">Phone + OTP sign-in</div><div class="q">No passwords. Phone and OTP, the way Vietnamese consumer apps work.</div><div class="p">Real auth with role-based redirect. A family handed off by a hospital signs in with the phone number the hospital entered.</div></div><img loading="lazy" src="screenshots/01-login.png" alt="Phone + OTP sign-in"></div>
+
+  <h2 class="section">1 · The handoff <span>— hospital → coordinator</span><em>Core · coordination</em></h2>
+  <div class="card desktop"><div class="cap"><div class="n">02 · /hospital/handoffs</div><div class="t">The hospital hands a patient over</div><div class="q">Before discharge the ward fills one form: diagnosis, discharge medicines, what the patient needs at home, and who in the family to call.</div><div class="p">Three programmes (mother &amp; baby, post-stroke, post-heart-attack). The form cannot be sent without the patient's signed request to share their discharge information; sent handoffs and their status are listed below.</div></div><img loading="lazy" src="screenshots/02-hospital-handoff-form.png" alt="The hospital hands a patient over"></div>
+  <div class="card desktop"><div class="cap"><div class="n">03 · /coordinator</div><div class="t">The coordinator's inbox and caseload</div><div class="q">A named coordinator accepts. That one click creates the family's account, the patient record and a dated care plan.</div><div class="p">Handoff intake with the consent flags visible; caseload sorted by urgency: critical alerts, then overdue steps, then risk.</div></div><img loading="lazy" src="screenshots/03-coordinator-inbox-caseload.png" alt="The coordinator's inbox and caseload"></div>
+  <div class="card desktop"><div class="cap"><div class="n">04 · /coordinator/episode/[id]</div><div class="t">One patient's episode: Ông Ba, 90 days after a stroke</div><div class="q">This is the coordinator's desk for one patient: what to do next, what the hospital said, every step of the pathway, the alerts, the call log.</div><div class="p">Rules pick the next best actions. After the critical glucose reading the plan added a call-back by itself (the row tagged “tự thêm sau cảnh báo”).</div></div><img loading="lazy" src="screenshots/04-coordinator-episode-stroke.png" alt="One patient's episode: Ông Ba, 90 days after a stroke"></div>
+
+  <h2 class="section">2 · The family's care plan <span>— mobile, what the family sees</span><em>Core · coordination</em></h2>
+  <div class="card mobile"><div class="cap"><div class="n">05 · /book</div><div class="t">Family home: Minh, son of Ông Ba</div><div class="q">The son opens the app after discharge. The plan is already there, with the coordinator's name on it.</div><div class="p">Care-plan card with progress and the next step; a rule-based readmission-risk estimate, labelled as decision support and not a diagnosis; services underneath.</div></div><img loading="lazy" src="screenshots/05-family-home-ong-ba.png" alt="Family home: Minh, son of Ông Ba"></div>
+  <div class="card mobile"><div class="cap"><div class="n">06 · /care/[id]</div><div class="t">Care plan: after a stroke, 90 days</div><div class="q">Medicines reconciled in 48 hours, rehab, blood pressure and glucose, follow-up visits. Each step has a date and an owner.</div><div class="p">Family-owned steps can be ticked by the family; bookable steps open the marketplace; the hospital's handoff is shown at the bottom with the free-choice notice.</div></div><img loading="lazy" src="screenshots/06-care-plan-stroke.png" alt="Care plan: after a stroke, 90 days"></div>
+  <div class="card mobile"><div class="cap"><div class="n">07 · /recipients/[id]</div><div class="t">The journey on one timeline</div><div class="q">Discharge, handoff, lab, nursing visit, glucose warning, glucose 260 critical, doctor consult. One story, one screen.</div><div class="p">Continuity of care: handoff, bookings, readings, escalations and consults in order.</div></div><img loading="lazy" src="screenshots/07-patient-journey-timeline.png" alt="The journey on one timeline"></div>
+  <div class="card mobile"><div class="cap"><div class="n">08 · /book</div><div class="t">Family home: Lan, five days after a caesarean</div><div class="q">Same app, a mother and her newborn. Two plans under one family account.</div><div class="p">One handoff from the maternity hospital opened two linked episodes: mother and baby.</div></div><img loading="lazy" src="screenshots/08-family-home-mother-baby.png" alt="Family home: Lan, five days after a caesarean"></div>
+  <div class="card mobile"><div class="cap"><div class="n">09 · /care/[id]</div><div class="t">Care plan: mother, 42 days</div><div class="q">Breastfeeding support, wound check, two depression screenings, the six-week check-up.</div><div class="p">Postpartum pathway including lactation and EPDS screening. The EPDS alert from the midwife's visit added a coordinator call-back.</div></div><img loading="lazy" src="screenshots/09-care-plan-postpartum.png" alt="Care plan: mother, 42 days"></div>
+  <div class="card mobile"><div class="cap"><div class="n">10 · /care/[id]</div><div class="t">Care plan: baby, 120 days</div><div class="q">Jaundice and weight checks in the first week, the heel-prick result, then vaccination reminders at two, three and four months.</div><div class="p">Newborn pathway anchored on the birth date; an open critical alert is the first thing the family sees.</div></div><img loading="lazy" src="screenshots/10-care-plan-newborn.png" alt="Care plan: baby, 120 days"></div>
+  <div class="card mobile"><div class="cap"><div class="n">11 · /recipients</div><div class="t">Everyone in the family account</div><div class="p">One account, several people cared for; each row opens that person's journey.</div></div><img loading="lazy" src="screenshots/11-recipients.png" alt="Everyone in the family account"></div>
+
+  <h2 class="section">3 · The marketplace <span>— book and pay; open to any family, and the plan books from it</span><em>Open marketplace</em></h2>
+  <div class="card mobile"><div class="cap"><div class="n">12 · /book/lab</div><div class="t">Home lab collection</div><div class="p">Lab catalogue and slot picker.</div></div><img loading="lazy" src="screenshots/12-book-lab.png" alt="Home lab collection"></div>
+  <div class="card mobile"><div class="cap"><div class="n">13 · /book/nursing</div><div class="t">Home nursing and rehab</div><div class="q">A single shift, a three-day post-discharge package, or a rehab session.</div><div class="p">Elderly catalogue with package pricing; home rehab added for the stroke and cardiac pathways.</div></div><img loading="lazy" src="screenshots/13-book-nursing.png" alt="Home nursing and rehab"></div>
+  <div class="card mobile"><div class="cap"><div class="n">14 · /book/maternal</div><div class="t">Postpartum care and the Mother &amp; Baby bundle</div><div class="p">Maternal catalogue including lactation support and the cross-track bundle.</div></div><img loading="lazy" src="screenshots/14-book-maternal-bundle.png" alt="Postpartum care and the Mother &amp; Baby bundle"></div>
+  <div class="card mobile"><div class="cap"><div class="n">15 · /book/newborn</div><div class="t">Newborn care</div><div class="p">Newborn catalogue (jaundice follow-up, cord care, feeding).</div></div><img loading="lazy" src="screenshots/15-book-newborn.png" alt="Newborn care"></div>
+  <div class="card mobile"><div class="cap"><div class="n">16 · /bookings</div><div class="t">Bookings</div><div class="p">Status of every booking in plain language.</div></div><img loading="lazy" src="screenshots/16-bookings-list.png" alt="Bookings"></div>
+  <div class="card mobile"><div class="cap"><div class="n">17 · /bookings/[id]</div><div class="t">Lab result with the abnormal value flagged</div><div class="q">The HbA1c comes back and the abnormal value is flagged for the family. That booking also ticked the lab step in the care plan.</div><div class="p">Lab loop closed; a completed booking completes its pathway step.</div></div><img loading="lazy" src="screenshots/17-booking-detail-lab-result.png" alt="Lab result with the abnormal value flagged"></div>
+  <div class="card mobile"><div class="cap"><div class="n">18 · /pay/[id]</div><div class="t">Payment summary</div><div class="p">Price shown before the gateway.</div></div><img loading="lazy" src="screenshots/18-payment-summary.png" alt="Payment summary"></div>
+  <div class="card mobile"><div class="cap"><div class="n">19 · /mock/vnpay/[id]</div><div class="t">Mock VNPay gateway</div><div class="q">Payment runs through a mock VNPay. A duplicate callback never charges twice.</div><div class="p">Payment plus an idempotent webhook.</div></div><img loading="lazy" src="screenshots/19-mock-vnpay-gateway.png" alt="Mock VNPay gateway"></div>
+  <div class="card mobile"><div class="cap"><div class="n">20 · /more</div><div class="t">Account</div><div class="p">Account surface and sign-out.</div></div><img loading="lazy" src="screenshots/20-more.png" alt="Account"></div>
+
+  <h2 class="section">4 · The provider's phone <span>— nurses and midwives in the home</span><em>Open marketplace</em></h2>
+  <div class="card mobile"><div class="cap"><div class="n">21 · /provider</div><div class="t">Today's jobs</div><div class="p">Job list for the signed-in provider.</div></div><img loading="lazy" src="screenshots/21-provider-jobs.png" alt="Today's jobs"></div>
+  <div class="card mobile"><div class="cap"><div class="n">22 · /provider/visit/[id]</div><div class="t">Home visit: glucose 210, then 260</div><div class="q">Readings are checked against thresholds as they are typed. 260 crossed the critical line and alerted the family, the coordinator, the doctor and ops.</div><div class="p">The safety spine. The banner shows the warning that is still open; the critical reading was closed by the doctor's consult.</div></div><img loading="lazy" src="screenshots/22-provider-visit-elderly-escalation.png" alt="Home visit: glucose 210, then 260"></div>
+  <div class="card mobile"><div class="cap"><div class="n">23 · /provider/visit/[id]</div><div class="t">Newborn visit: bilirubin 16, critical</div><div class="q">The most safety-critical track, so the screen is honest: the threshold is marked as awaiting clinical sign-off.</div><div class="p">Newborn thresholds carry “DEMO — chưa duyệt lâm sàng” and are gated against real visits until a clinician approves them.</div></div><img loading="lazy" src="screenshots/23-provider-visit-newborn-bilirubin.png" alt="Newborn visit: bilirubin 16, critical"></div>
+
+  <h2 class="section">5 · The doctor layer <span>— remote consult on escalations</span><em>Family-health ecosystem</em></h2>
+  <div class="card mobile"><div class="cap"><div class="n">24 · /doctor</div><div class="t">On-call doctor's consult queue</div><div class="q">The red flag lands here. The doctor records advice after a video consult and the alert closes; Bé Lê's bilirubin is waiting, so this can be resolved live.</div><div class="p">Escalations reach a doctor; the video call itself is simulated in the demo.</div></div><img loading="lazy" src="screenshots/24-doctor-teleconsult-queue.png" alt="On-call doctor's consult queue"></div>
+
+  <h2 class="section">6 · Hospitals and clinical partners <span>— what the handing-off facility sees, and how it is paid</span><em>Core · coordination</em></h2>
+  <div class="card desktop"><div class="cap"><div class="n">25 · /hospital</div><div class="t">Hospital dashboard after discharge</div><div class="q">The hospital keeps sight of the patients it handed over: plan progress, open alerts, consults.</div><div class="p">Scoped to this hospital's own handed-off patients, nobody else's.</div></div><img loading="lazy" src="screenshots/25-hospital-command-center.png" alt="Hospital dashboard after discharge"></div>
+  <div class="card desktop"><div class="cap"><div class="n">26 · /hospital/referrals</div><div class="t">Hospital: cooperation terms and fee ledger</div><div class="p">The facility sees its contract, how the fee is calculated and each accrued line.</div></div><img loading="lazy" src="screenshots/26-hospital-cooperation-ledger.png" alt="Hospital: cooperation terms and fee ledger"></div>
+  <div class="card desktop"><div class="cap"><div class="n">27 · /hospital/handoffs</div><div class="t">A private clinic handing off</div><div class="p">The same handoff flow for a private obstetric clinic; the partner is the clinic, not the individual doctor.</div></div><img loading="lazy" src="screenshots/27-clinic-handoffs.png" alt="A private clinic handing off"></div>
+  <div class="card desktop"><div class="cap"><div class="n">28 · /hospital/referrals</div><div class="t">Clinic: cooperation terms and fee ledger</div><div class="p">The clinic's own ledger.</div></div><img loading="lazy" src="screenshots/28-clinic-cooperation-ledger.png" alt="Clinic: cooperation terms and fee ledger"></div>
+  <div class="card desktop"><div class="cap"><div class="n">29 · /ops/referrals</div><div class="t">Partner management and fees</div><div class="q">Partners are paid a fixed fee for the documented handoff, to the facility, under a contract.</div><div class="p">The rules block payment to individuals and keep percentage sharing locked until a written legal opinion is recorded. This design follows our reading of Vietnamese law and needs a Vietnamese healthcare lawyer's confirmation before any real payment.</div></div><img loading="lazy" src="screenshots/29-ops-clinical-partners.png" alt="Partner management and fees"></div>
+
+  <h2 class="section">7 · Ops console <span>— desktop, the control room</span><em>Open marketplace</em></h2>
+  <div class="card desktop"><div class="cap"><div class="n">30 · /ops</div><div class="t">Intake and matching</div><div class="p">Every booking across tracks, matched to a verified provider.</div></div><img loading="lazy" src="screenshots/30-ops-intake.png" alt="Intake and matching"></div>
+  <div class="card desktop"><div class="cap"><div class="n">31 · /ops/escalations</div><div class="t">Red-flag queue</div><div class="q">Critical first. And the platform's position is written on the screen: it relays alerts to the responsible doctor; it does not diagnose or prescribe.</div><div class="p">Safety triage plus the intermediary position (Decree 96/2023).</div></div><img loading="lazy" src="screenshots/31-ops-escalations.png" alt="Red-flag queue"></div>
+  <div class="card desktop"><div class="cap"><div class="n">32 · /ops/payouts</div><div class="t">Provider payouts and tax ledger</div><div class="q">Every payout withholds 5% VAT and 2% PIT at source, with a running ledger.</div><div class="p">Withholding works and is auditable (Decree 117/2025).</div></div><img loading="lazy" src="screenshots/32-ops-payouts-tax.png" alt="Provider payouts and tax ledger"></div>
+  <div class="card desktop"><div class="cap"><div class="n">33 · /ops/providers</div><div class="t">Provider credentialing</div><div class="p">A provider whose practising certificate is not verified is never offered a job.</div></div><img loading="lazy" src="screenshots/33-ops-credentialing.png" alt="Provider credentialing"></div>
+</div>
+<footer>Kề Bên · product tour · generated from the running app.<br>Illustrative data. The hospitals, the clinic, patients, doctors and agreement numbers are invented for this demo. They are not real organisations, people or signed partnerships.<br>Care pathways and alert thresholds are demo defaults that need clinician sign-off before use with real patients.</footer>
+</body>
+</html>
