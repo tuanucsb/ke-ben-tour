@@ -1,0 +1,5 @@
+.kb-bar{background:#15201D;color:#E2F1EC;font-size:12px;line-height:1.4;text-align:center;padding:6px 12px}
+.kb-bar a{color:#fff;font-weight:600;text-decoration:underline;margin:0 8px}
+.kb-bar span{display:inline-block;margin:0 8px;opacity:.8}
+.kb-note{position:fixed;left:50%;bottom:84px;transform:translate(-50%,16px);width:max-content;max-width:min(92vw,520px);background:#15201D;color:#fff;font-size:13px;line-height:1.45;text-align:center;padding:10px 14px;border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:9999}
+.kb-note.on{opacity:1;transform:translate(-50%,0)}
